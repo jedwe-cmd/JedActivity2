@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS techfest_db
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE techfest_db;
+
+CREATE TABLE IF NOT EXISTS registrations (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    age TINYINT UNSIGNED NOT NULL,
+    course VARCHAR(100) NOT NULL,
+    workshop_track VARCHAR(100) NOT NULL,
+    hobbies TEXT NOT NULL,
+    registered_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
